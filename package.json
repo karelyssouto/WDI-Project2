@@ -1,0 +1,28 @@
+{
+  "name": "project-2",
+  "version": "1.0.0",
+  "description": "## User Stories  1. As a User, I would like to create a collection in which I could include pictures of the clothing items I own. 2. As a User, I want to be able to organize my clothes in different categories. 3. As a User, I would like to add a collection called 'outfits', in which I can add different clothing items to create different outfits. 4. As a User, I want to have a list of all of my favorite stores, and to be able to add the location and link to the stores.",
+  "main": "server.js",
+  "scripts": {
+    "dev": "nodemon server.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/karelyssouto/WDI-Project2.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/karelyssouto/WDI-Project2/issues"
+  },
+  "homepage": "https://github.com/karelyssouto/WDI-Project2#readme",
+  "dependencies": {
+    "express": "^4.16.4",
+    "hbs": "^4.0.1",
+    "method-override": "^3.0.0",
+    "mongoose": "^5.4.2"
+  }
+}

@@ -17,6 +17,6 @@
 
 ## Wireframes
 
-##ERD
+## ERD
 ![ERD](/images/ERD.png)
 

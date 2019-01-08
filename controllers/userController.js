@@ -16,17 +16,33 @@ const userController = {
         User.create(req.body).then(newUser =>{
             res.redirect('/home')
         })
-    show: (req,res) => {
-        const userId = req.params.index
-        User.findById(userId).then(userId =>{
-            res.render('userProfile', {userId})
+    },
+    show: (req, res) => {
+        const userId = req.params.userId
+        User.findById(userId).then(userId => {
+            res.render('user/userProfile', { userId })
+        })
+    },
+    edit: (req,res) => {
+        const userId = req.params.userId
+        res.render('user/editInfo', {userId})
+    },
+    update: (req,res) =>{
+        const userId= req.params.userId
+        User.findByIdAndUpdate(userId, req.body,{new: true}).then(()=>{
+            res.redirect(`/${userId}`)
+        })
+    },
+    delete: (req,res) => {
+        const userId = req.params.userId
+        User.findByIdAndDelete(userId).then(()=>{
+            res.redirect('/home')
         })
     }
-        
-    }
-
-
-
 }
+
+
+
+
 
 module.exports = userController

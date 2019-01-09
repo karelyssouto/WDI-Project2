@@ -3,7 +3,7 @@ const Schema = mongoose.Schema
 
 const Closet = new Schema({
     name: String,
-    image: String,
+    img: String,
     clothes: []
 })
 

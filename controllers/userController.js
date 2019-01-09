@@ -14,7 +14,7 @@ const userController = {
     },
     create: (req,res)=>{
         User.create(req.body).then(newUser =>{
-            res.redirect('/home')
+            res.redirect('/users')
         })
     },
     show: (req, res) => {
@@ -30,15 +30,16 @@ const userController = {
     update: (req,res) =>{
         const userId= req.params.userId
         User.findByIdAndUpdate(userId, req.body,{new: true}).then(()=>{
-            res.redirect(`/${userId}`)
+            res.redirect(`/users${userId}`)
         })
     },
     delete: (req,res) => {
         const userId = req.params.userId
         User.findByIdAndDelete(userId).then(()=>{
-            res.redirect('/home')
+            res.redirect('/users')
         })
-    }
+    },
+    
 }
 
 

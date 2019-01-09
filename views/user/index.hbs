@@ -1,7 +1,37 @@
-<h1>HOME</h1>
+<nav class="navbar" role="navigation" aria-label="main navigation">
+    <div class="navbar-brand">
+        <a class="navbar-item" href="/">
+            <img src="https://www.amara.com/static/uploads/images-1/products/huge/103743/alu-hanger-black-785425.jpg">
+        </a>
+
+    <div class="navbar-end">
+        <a href="/users/newUser" class="navbar-item">New User</a>
+    </div>
+    </div>
+</nav>
 
 {{#each user}}
-<h1><a href="{{_id}}">{{name}}</h1></a> 
-<h2>{{email}}</h2>
+
+
+
+
+<div class="card is-small">
+    <div class="card-image">
+        <figure class="image is-4by3">
+            <img src="{{{img}}}" alt="Placeholder image">
+        </figure>
+    </div>
+    <div class="card-content">
+        <div class="media">
+            <div class="media-content">
+                <p class="title is-4">{{name}}</p>
+                <p class="subtitle is-6">{{email}}</p>
+            </div>
+        </div>
+    </div>
+    <footer class="card-footer">
+        <a href="/users/{{_id}}/closets" class="card-footer-item">{{name}}'s Closet</a>
+        <a href="/users/{{_id}}" class="card-footer-item">Profile</a>
+    </footer>
+</div>
 {{/each}}
-<a href="/newUser" class="button is-black">new user</a>

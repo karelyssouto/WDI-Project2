@@ -1,6 +1,5 @@
 <h1>{{userId.name}}</h1>
 <a href="/users/{{userId._id}}/edit" class="button is-black">edit profile</a>
-<a href="/users/{{userId._id}}/newCategory" class="button is-black">new category</a>
 <form action="/users/{{userId._id}}?_method=DELETE" method="POST">
     <button class="button is-black" type="submit">Delete</button>
 </form>

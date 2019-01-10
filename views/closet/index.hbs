@@ -1,4 +1,24 @@
+<nav class="navbar" role="navigation" aria-label="main navigation">
+    <div class="navbar-brand">
+        <a class="navbar-item" href="/">
+            <img src="https://www.amara.com/static/uploads/images-1/products/huge/103743/alu-hanger-black-785425.jpg">
+        </a>
+
+        <div class="navbar-end">
+            <a href="/users/{{userId}}/newCategory" class="navbar-item">New category</a>
+        </div>
+    </div>
+</nav>
+
+
 {{#each category}}
 <h1>{{name}}</h1>
+<a href="/users/{{_id}}/closets/{{_id}}">
 <img src="{{{img}}}" alt="">
+</a>
+
+
+<form action="/users/{{../userId}}/closets/{{_id}}?_method=DELETE" method="POST">
+    <button class="button is-black" type="submit">Delete</button>
+</form>
 {{/each}}

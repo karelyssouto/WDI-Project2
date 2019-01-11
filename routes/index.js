@@ -16,12 +16,11 @@ router.delete('/users/:userId', userController.delete)
 router.get('/users/:userId/closets', closetController.index)
 router.get('/users/:userId/newCategory', closetController.new)
 router.post('/users/:userId/closets', closetController.create)
-router.delete('/users/:userId/closets/:id', closetController.delete)
+router.get('/users/:userId/closets/:closetid', closetController.show)
+router.delete('/users/:userId/closets/:closetid', closetController.delete)
 
-
-// router.get('/users/:userId/closets/:id', clothesController.index)
-// router.get('/users/:userId/closets/:id/new', clothesController.new)
-// router.post('/users/:userId/closets/:id', clothesController.create)
+router.get('/users/:userId/closets/:closetid/new', clothesController.new)
+router.post('/users/:userId/closets/:closetid', clothesController.create)
 // router.delete('/users/:userId/closets/:id', clothesController.delete)
 
 module.exports = router

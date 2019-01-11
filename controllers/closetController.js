@@ -1,6 +1,6 @@
 const User = require('../models/User')
 const Closet = require('../models/Closet')
-const Clothes = require('../models/Clothes')
+
 
 const closetController = {
     index: (req, res) => {
@@ -30,11 +30,18 @@ const closetController = {
                     })
             })
     },
+    show: (req,res) =>{
+        const userId = req.params.userId
+        const closetid = req.params.closetid
+        Closet.findById(closetid).then(closetid =>{
+            res.render('closet/show', {userId, closetid})
+        })
+    },
     delete: (req, res) => {
         const userId = req.params.userId
         // User.findById(userId)
         console.log(userId)
-        const closetid = req.params.id
+        const closetid = req.params.closetid
         Closet.findByIdAndDelete(closetid).then(() => {
             res.redirect(`/users/${userId}/closets`)
         })

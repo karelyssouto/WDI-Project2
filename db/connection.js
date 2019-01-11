@@ -1,6 +1,7 @@
 const mongoose = require("mongoose")
+require('dotenv').config()
 
-mongoose.connect("mongodb://localhost/your-data-base-name").then(() => {
+mongoose.connect(process.env.MONGODB_URI).then(() => {
     console.log("MONGODB is now connected")
 })
 

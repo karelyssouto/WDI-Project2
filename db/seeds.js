@@ -10,7 +10,7 @@ User.deleteMany({})
             closetCollection: []
         })
         .then((user) => {
-            const closet = Closet.create({
+            const userCloset = Closet.create({
                 name: 'Shirts',
                 img: 'https://bananarepublic.gap.com/webcontent/0014/450/543/cn14450543.jpg',
                 clothes:[]
@@ -19,7 +19,7 @@ User.deleteMany({})
                 user.closetCollection.push(closet)
             })
 
-            Promise.all([closet])
+            Promise.all([userCloset])
                 .then(() => {
                     user.save()
                 })

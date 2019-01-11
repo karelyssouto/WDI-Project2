@@ -30,12 +30,12 @@ const closetController = {
                     })
             })
     },
-    delete: (req,res) => {
+    delete: (req, res) => {
         const userId = req.params.userId
         // User.findById(userId)
         console.log(userId)
         const closetid = req.params.id
-        Closet.findByIdAndDelete(closetid).then(()=>{
+        Closet.findByIdAndDelete(closetid).then(() => {
             res.redirect(`/users/${userId}/closets`)
         })
     }

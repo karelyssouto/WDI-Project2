@@ -1,3 +1,10 @@
+{{!-- <h1>Where did you get this item?</h1>
+<form action="/users/{{userId}}/closets/{{clothesId}}" method="POST">
+    <input type="text" name="storeName" placeholder="Store Name" value="">
+    <input type="text" name="storeLink" placeholder="Store Link" value="">
+    <button type="submit">Post</button>
+</form> --}}
+
 <nav class="navbar" role="navigation" aria-label="main navigation">
     <div class="navbar-brand">
         <a class="navbar-item" href="/">
@@ -16,26 +23,20 @@
 
                 <div class="tile is-parent">
                     <article class="tile is-child notification landingPage">
-                        <p class="title">Edit your Profile</p>
-                        <p class="subtitle">Update your profile info.</p>
-                            <form action="/users/{{userId}}?_method=PATCH" method="POST">
+                        <p class="title">Where did you get this item?</p>
+                        <p class="subtitle">Share it with others below.</p>
+                        <form action="/users/{{userId}}/closets/{{clothesId}}" method="POST">
                             <div class="field">
                                 <label class="label"></label>
                                 <div class="control">
-                                    <input class="input" type="text" name="name" placeholder="Name" value="">
+                                    <input class="input" type="text" placeholder="Name of the Store" value="">
                                 </div>
                             </div>
 
                             <div class="field">
                                 <label class="label"></label>
                                 <div class="control">
-                                    <input class="input" type="email" name="email" placeholder="Email" value="">
-                                </div>
-                            </div>
-                            <div class="field">
-                                <label class="label"></label>
-                                <div class="control">
-                                    <input class="input" type="text" name="img" placeholder="Image url" value="">
+                                    <input class="input" type="text" placeholder="Stores's website link" value="">
                                 </div>
                             </div>
                             <button class="button is-black" type="submit">Post</button>

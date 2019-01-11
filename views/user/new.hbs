@@ -1,6 +1,49 @@
-<form action="/users" method="POST">
-    <input type="text" name="name" placeholder="Name" value="">
-    <input type="text" name="email" placeholder="Email" value="">
-    <input type="text" name="img" placeholder="Image" value="">
-    <button type="submit">Post</button>
-</form>
+<nav class="navbar" role="navigation" aria-label="main navigation">
+    <div class="navbar-brand">
+        <a class="navbar-item" href="/">
+            <h1 class="title">Virtual Closet</h1>
+        </a>
+        <div class="navbar-item"></div>
+        <div class="navbar-item"></div>
+    </div>
+</nav>
+
+
+<div class="container is-cvertical">
+    <div class="tile is-ancestor">
+    <div class="tile is-vertical is-8">
+        <div class="tile">
+ 
+            <div class="tile is-parent">
+                <article class="tile is-child notification landingPage" >
+                    <p class="title">Welcome to Virtual Closet</p>
+                    <p class="subtitle">Create your user below.</p>
+                        <form action="/users" method="POST">
+                            <div class="field">
+                                <label class="label"></label>
+                                <div class="control">
+                                    <input class="input" type="text" placeholder="Name" value="">
+                                </div>
+                            </div>
+                        
+                            <div class="field">
+                                <label class="label"></label>
+                                <div class="control">
+                                    <input class="input" type="email" placeholder="Email" value="">
+                                </div>
+                            </div>
+                            <div class="field">
+                                <label class="label"></label>
+                                <div class="control">
+                                    <input class="input" type="text" placeholder="Image url" value="">
+                                </div>
+                            </div>
+                            <button class="button is-black" type="submit">Post</button>
+                        </form>
+                </article>
+            </div>
+        </div>
+
+
+    </div>
+</div>

@@ -1,29 +1,39 @@
 <nav class="navbar" role="navigation" aria-label="main navigation">
     <div class="navbar-brand">
         <a class="navbar-item" href="/">
-            <img src="https://www.amara.com/static/uploads/images-1/products/huge/103743/alu-hanger-black-785425.jpg">
+            <h1 class="title">Virtual Closet</h1>
         </a>
-
+    <div class="navbar-item"></div>
+    <div class="navbar-item"></div>
+ 
+    
     <div class="navbar-end">
-        <a href="/users/newUser" class="navbar-item">New User</a>
+    <div class="navbar-item">
+        <div class="buttons">
+            <a href="/users/newUser"class="button is-white">
+                <h1 class="subtitle" style="color: rgb(202, 155, 117)">New User</h1>
+            </a>
+        </div>
+    </div>
     </div>
     </div>
 </nav>
 
-{{#each user}}
 
-
-
-
-<div class="card is-4">
-    <div class="card-image">
-        <figure class="image is-4by3">
-            <img src="{{{img}}}" alt="Placeholder image">
-        </figure>
-    </div>
-    <div class="card-content">
-        <div class="media">
-            <div class="media-content">
+<div class=" columns is-centered">
+    {{#each user}}
+    <div class="column is-full-mobile is-one-third-tablet is-one-quarter-desktop is-one-quarter-widescreen is-one-quarter-fullhd">
+    
+        <div class="card">
+    
+            <div class="card-image ">
+                <figure class="image is-4by3">
+                    <img src="{{{img}}}" alt="Placeholder image">
+                </figure>
+            </div>
+        <div class="card-content">
+            <div class="media">
+                <div class="media-content">
                 <p class="title is-4">{{name}}</p>
                 <p class="subtitle is-6">{{email}}</p>
             </div>
@@ -33,5 +43,8 @@
         <a href="/users/{{_id}}/closets" class="card-footer-item">{{name}}'s Closet</a>
         <a href="/users/{{_id}}" class="card-footer-item">Profile</a>
     </footer>
+    </div>
+    </div>
+    {{/each}}
 </div>
-{{/each}}
+

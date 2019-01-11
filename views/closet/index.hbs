@@ -1,11 +1,23 @@
 <nav class="navbar" role="navigation" aria-label="main navigation">
     <div class="navbar-brand">
         <a class="navbar-item" href="/">
-            <img src="https://www.amara.com/static/uploads/images-1/products/huge/103743/alu-hanger-black-785425.jpg">
+            <h1 class="title">Virtual Closet</h1>
         </a>
+        <div class="navbar-item"></div>
+        <div class="navbar-item"></div>
+
 
         <div class="navbar-end">
-            <a href="/users/{{userId}}/newCategory" class="navbar-item">New category</a>
+            <div class="navbar-item">
+                <div class="buttons">
+                    <a href="/users/{{userId}}/newCategory" class="button is-white">
+                        <h1 class="subtitle" style="color: rgb(202, 155, 117)">Add to your Closet!</h1>
+                    </a>
+                </div>
+            </div>
+        </div>
+    
+
         </div>
     </div>
 </nav>
@@ -13,7 +25,7 @@
 
 {{#each category}}
 <h1>{{name}}</h1>
-<a href="/users/{{_id}}/closets/{{_id}}">
+<a href="/users/{{../userId}}/closets/{{_id}}">
 <img src="{{{img}}}" alt="">
 </a>
 

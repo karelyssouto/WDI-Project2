@@ -18,5 +18,10 @@ router.get('/users/:userId/newCategory', closetController.new)
 router.post('/users/:userId/closets', closetController.create)
 router.delete('/users/:userId/closets/:id', closetController.delete)
 
-router.get('/users/:userId/closets/:id', clothesController.index)
+
+// router.get('/users/:userId/closets/:id', clothesController.index)
+// router.get('/users/:userId/closets/:id/new', clothesController.new)
+// router.post('/users/:userId/closets/:id', clothesController.create)
+// router.delete('/users/:userId/closets/:id', clothesController.delete)
+
 module.exports = router

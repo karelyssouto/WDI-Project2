@@ -5,6 +5,7 @@ const User = new Schema({
     name: String,
     email: String,
     img: String,
+    style: String,
     closetCollection: [{
         type: Schema.Types.ObjectId,
         ref: 'Closet'

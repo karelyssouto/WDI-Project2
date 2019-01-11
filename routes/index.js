@@ -14,13 +14,13 @@ router.patch('/users/:userId', userController.update)
 router.delete('/users/:userId', userController.delete)
 
 router.get('/users/:userId/closets', closetController.index)
-router.get('/users/:userId/newCategory', closetController.new)
+router.get('/users/:userId/new', closetController.new)
 router.post('/users/:userId/closets', closetController.create)
 router.get('/users/:userId/closets/:closetid', closetController.show)
 router.delete('/users/:userId/closets/:closetid', closetController.delete)
 
 router.get('/users/:userId/closets/:closetid/new', clothesController.new)
-router.post('/users/:userId/closets/:closetid', clothesController.create)
+router.post('/users/:userId/closets/:closetid/:id', clothesController.create)
 router.delete('/users/:userId/closets/:closetid/:id', clothesController.delete)
 
 module.exports = router

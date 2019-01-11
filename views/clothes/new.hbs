@@ -16,13 +16,13 @@
 </nav>
 
 
-<div class="container is-cvertical">
-    <div class="tile is-ancestor">
-        <div class="tile is-vertical is-8">
+<div class="container">
+    <div class="container tile is-ancestor">
+        <div class="container tile is-8" style="padding-top:10%">
             <div class="tile">
 
                 <div class="tile is-parent">
-                    <article class="tile is-child notification landingPage">
+                    <article class="tile is-child notification" style="background:peachpuff">
                         <p class="title">Where did you get this item?</p>
                         <p class="subtitle">Share it with others below.</p>
                         <form action="/users/{{userId}}/closets/{{_id}}" method="POST">
@@ -40,6 +40,7 @@
                                 </div>
                             </div>
                             <button class="button is-black" type="submit">Post</button>
+                            <a href="/users/{{userId}}/closets/{{closetid}}/{{_id}}" class="button is-light">Back</a>
                         </form>
                     </article>
                 </div>

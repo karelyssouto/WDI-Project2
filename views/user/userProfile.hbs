@@ -9,47 +9,33 @@
 </nav>
 
 
-
-
-
-{{!-- <h1>{{userId.name}}</h1> --}}
-<a href="/users/{{userId._id}}/edit" class="button is-black">edit profile</a>
-{{!-- <form action="/users/{{userId._id}}?_method=DELETE" method="POST">
-    <button class="button is-black" type="submit">Delete</button>
-</form> --}}
-ds
-<article class="media">
-    <figure class="media-left">
-        <p class="image is-64x64">
-            <img src="{{userId.img}}">
-        </p>
-    </figure>
-    <div class="media-content">
+<div class="tile is-full-mobile" style="padding: 10% 25% 15% 25%;">
+<article class="media tile is-12 notification" style="background:peachpuff">
+                <figure class="image is-128bx128px">
+                    <img src="{{userId.img}}">
+                </figure>
+    <div class="media-content " style="padding-left:5%; padding-top:5%">
         <div class="content">
             <p>
-                <strong>{{userId.name}}</strong> <small>{{userId.email}}</small> 
+                <strong class="title">{{userId.name}}</strong>
                 <br>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ornare magna eros, eu pellentesque
-                tortor vestibulum ut. Maecenas non massa sem. Etiam finibus odio quis feugiat facilisis.
+                 <small >{{userId.email}}</small> 
+                <br>
+                <small >My Style: </small> <strong>{{userId.style}}</strong>
             </p>
+
+            <a href="/users/{{userId._id}}/edit" class="button is-black">Edit</a>
+
+            <a href="/users" class="button is-light">Back</a>
+
         </div>
-        <nav class="level is-mobile">
-            <div class="level-left">
-                <a class="level-item">
-                    <span class="icon is-small"><i class="fas fa-reply"></i></span>
-                </a>
-                <a class="level-item">
-                    <span class="icon is-small"><i class="fas fa-retweet"></i></span>
-                </a>
-                <a class="level-item">
-                    <span class="icon is-small"><i class="fas fa-heart"></i></span>
-                </a>
-            </div>
-        </nav>
     </div>
     <div class="media-right">
         <form action="/users/{{userId._id}}?_method=DELETE" method="POST">
             <button class="delete" type="submit"></button>
         </form>
+        
     </div>
 </article>
+
+</div>

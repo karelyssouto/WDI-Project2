@@ -27,7 +27,7 @@ const clothesController = {
         const clothesId = req.params.id
         console.log(clothesId)
         Clothes.findByIdAndDelete(clothesId).then(()=>{
-            res.redirect(`/users/${userId}/closets`)
+            res.redirect(`/users/${userId}/closets/${clothesId}`)
         })
     }
 }

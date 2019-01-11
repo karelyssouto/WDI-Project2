@@ -1,7 +1,7 @@
 .landingPage{
-    background: peachpuff
+    background: peachpuff;
+    clip-path: polygon(74% 0, 100% 51%, 82% 100%, 0 100%, 0 0);
 }
-
 .title{
     font-family: 'Thasadith', sans-serif;
     color: rgb(156, 117, 85)
@@ -41,7 +41,10 @@
 .navbar{
     background: peachpuff
 }
-.card{
+.columns{
+    padding-top: 5%
+}
+.card-footer{
     background: peachpuff;
 }
 a{

@@ -9,13 +9,13 @@
 </nav>
 
 
-<div class="container is-cvertical">
-    <div class="tile is-ancestor">
-        <div class="tile is-vertical is-8">
+<div class="container" style="padding-top:10%">
+    <div class="container tile is-ancestor">
+        <div class="container tile is-vertical is-8">
             <div class="tile">
 
                 <div class="tile is-parent">
-                    <article class="tile is-child notification landingPage">
+                    <article class="tile is-child notification" style="background:peachpuff">
                         <p class="title">Edit your Profile</p>
                         <p class="subtitle">Update your profile info.</p>
                             <form action="/users/{{userId}}?_method=PATCH" method="POST">
@@ -38,7 +38,15 @@
                                     <input class="input" type="text" name="img" placeholder="Image url" value="">
                                 </div>
                             </div>
+                            <div class="field">
+                                <label class="label"></label>
+                                <div class="control">
+                                    <input class="input" type="text" name="style" placeholder="What's your style?" value="">
+                                </div>
+                            </div>
                             <button class="button is-black" type="submit">Post</button>
+                            <a href="/users/{{userId}}" class="button is-light">Back</a>
+
                         </form>
                     </article>
                 </div>

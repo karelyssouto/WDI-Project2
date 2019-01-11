@@ -15,7 +15,7 @@ const closetController = {
     new: (req, res) => {
         const userId = req.params.userId
         console.log(req.params.userId)
-        res.render('/closet/new', { userId })
+        res.render('closet/new', { userId })
     },
     create: (req, res) => {
         const userId = req.params.userId

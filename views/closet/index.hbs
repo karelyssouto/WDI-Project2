@@ -10,8 +10,8 @@
         <div class="navbar-end">
             <div class="navbar-item">
                 <div class="buttons">
-                    <a href="/users/{{userId}}/newCategory" class="button is-white">
-                        <h1 class="subtitle" style="color: rgb(202, 155, 117)">Add to your Closet!</h1>
+                    <a href="/users/{{userId}}/new" class="button is-black">
+                        <h1>Add to your Closet!</h1>
                     </a>
                 </div>
             </div>
@@ -23,14 +23,23 @@
 </nav>
 
 
-{{#each category}}
-<h1>{{name}}</h1>
-<a href="/users/{{../userId}}/closets/{{_id}}">
-<img src="{{{img}}}" alt="">
-</a>
 
 
-<form action="/users/{{../userId}}/closets/{{_id}}?_method=DELETE" method="POST">
-    <button class="button is-black" type="submit">Delete</button>
-</form>
-{{/each}}
+<div class="columns is-centered">
+    {{#each category}}
+    <div class="column is-full-mobile is-one-third-tablet is-one-quarter-desktop is-one-quarter-widescreen is-one-quarter-fullhd">
+<div class="tile is-ancestor">
+    <div class="tile is-parent">
+        <article class="tile is-child box">
+            <figure class="image is-4by3">
+                <a href="/users/{{../userId}}/closets/{{_id}}"><img src="{{img}}"></a>
+            </figure>
+            <form action="/users/{{../userId}}/closets/{{_id}}?_method=DELETE" method="POST">
+                <button class="button is-black" type="submit">Delete</button>
+            </form>           
+        </article>
+    </div>
+</div>
+    {{/each}}
+
+</div>

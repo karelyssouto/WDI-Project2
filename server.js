@@ -3,6 +3,7 @@ const app = express()
 const router = require('./routes/index')
 const methodOverride = require('method-override')
 
+// middleware
 app.use(express.static(__dirname + '/public'))
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());

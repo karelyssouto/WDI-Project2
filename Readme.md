@@ -1,4 +1,6 @@
-# Project 2
+# Project 2: Virtual Closet
+## About Virtual Closet
+Virtual Closet is an app in which you can organize 
 
 ## User Stories 
 1. As a User, I want to be able to create a profile in which I can put my name, email, a profile picture, and the style of how I dress so that other users can see it on the page when they click on my profile.
@@ -15,9 +17,21 @@
 - Node.js
 
 ## Resources
+- Bulma.
+- MEHN lab
+- Animate.css
+- Google Fonts.
+- CSS Tricks.
 
 ## Wireframes
-
+![WIREFRAME](/images/wireframe.png)
 ## ERD
 ![ERD](/images/ERD.png)
+
+### Virtual Closet vs 1.1
+
+1. User Authentication
+2. Allow users to mark an item as a favorite and pushing that into a closet category.
+3. Users are able to upload a local image.
+
 

@@ -33,13 +33,13 @@ const closetController = {
     show: (req,res) =>{
         const userId = req.params.userId
         const closetid = req.params.closetid
-        Closet.findById(closetid).then(closetid =>{
-            res.render('closet/show', {userId, closetid})
+        Closet.findById(closetid).populate('clothesInfo').then(closetid =>{
+            const info = closetid.clothesInfo
+            res.render('closet/show', {userId, closetid, info})
         })
     },
     delete: (req, res) => {
         const userId = req.params.userId
-        // User.findById(userId)
         console.log(userId)
         const closetid = req.params.closetid
         Closet.findByIdAndDelete(closetid).then(() => {

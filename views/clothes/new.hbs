@@ -1,9 +1,3 @@
-{{!-- <h1>Where did you get this item?</h1>
-<form action="/users/{{userId}}/closets/{{clothesId}}" method="POST">
-    <input type="text" name="storeName" placeholder="Store Name" value="">
-    <input type="text" name="storeLink" placeholder="Store Link" value="">
-    <button type="submit">Post</button>
-</form> --}}
 
 <nav class="navbar" role="navigation" aria-label="main navigation">
     <div class="navbar-brand">
@@ -25,18 +19,18 @@
                     <article class="tile is-child notification" style="background:peachpuff">
                         <p class="title">Where did you get this item?</p>
                         <p class="subtitle">Share it with others below.</p>
-                        <form action="/users/{{userId}}/closets/{{_id}}" method="POST">
+                        <form action="/users/{{userId}}/closets/{{closetid}}" method="POST">
                             <div class="field">
                                 <label class="label"></label>
                                 <div class="control">
-                                    <input class="input" type="text" placeholder="Name of the Store" value="">
+                                    <input class="input" type="text" name="store" placeholder="Name of the Store" value="">
                                 </div>
                             </div>
 
                             <div class="field">
                                 <label class="label"></label>
                                 <div class="control">
-                                    <input class="input" type="text" placeholder="Stores's website link" value="">
+                                    <input class="input" type="text" name="storeLink" placeholder="Stores's website link" value="">
                                 </div>
                             </div>
                             <button class="button is-black" type="submit">Post</button>

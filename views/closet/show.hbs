@@ -17,7 +17,7 @@
 <h1>{{store}}</h1>
 <h1>{{storeLink}}</h1>
 
-<form action="/users/{{../userId}}/closets?_method=DELETE" method="POST">
+<form action="/clothes/{{_id}}?_method=DELETE" method="POST">
     <button class="delete" type="submit"></button>
 </form>
 {{/each}}

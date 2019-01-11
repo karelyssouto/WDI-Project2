@@ -19,6 +19,7 @@ User.deleteMany({})
             .then((closet) => {
                 user.closetCollection.push(closet)
             })
+            // .then(()=>)
 
             Promise.all([userCloset])
                 .then(() => {

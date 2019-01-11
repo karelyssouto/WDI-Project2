@@ -21,6 +21,6 @@ router.delete('/users/:userId/closets/:closetid', closetController.delete)
 
 router.get('/users/:userId/closets/:closetid/new', clothesController.new)
 router.post('/users/:userId/closets/:closetid', clothesController.create)
-router.delete('/users/:userId/closets/:closetid/:id', clothesController.delete)
+router.delete('/clothes/:id', clothesController.delete)
 
 module.exports = router

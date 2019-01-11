@@ -14,10 +14,12 @@
 
 {{#each info}}
 
-<h1>{{store}}</h1>
-<h1>{{storeLink}}</h1>
+{{../category.img}}
 
-        <form action="/users/{{../userId}}/closets/{{../closetid._id}}/{{_id}}?_method=DELETE" method="POST">
+<h1 class="title is-1">{{store}}</h1>
+<h1 class="subtitle">{{storeLink}}</h1>
+
+        <form action="/clothes/{{_id}}?_method=DELETE" method="POST">
             <button class="delete" type="submit"></button>
         </form>
 {{/each}}

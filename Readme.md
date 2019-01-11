@@ -2,8 +2,8 @@
 ## About Virtual Closet
 ### Virtual Closet is an app in which you can organize all the clothing items that are in your closet, and you are able to share it with others so that you can get inspiration from other users.
 
-### ![Trello](https://trello.com/b/8g9ILSUm/wdi-unit2project)
-### ![Heroku App](https://shielded-coast-49259.herokuapp.com/)
+### [Trello](https://trello.com/b/8g9ILSUm/wdi-unit2project)
+### [Heroku App](https://shielded-coast-49259.herokuapp.com/)
 ## User Stories 
 1. As a User, I want to be able to create a profile in which I can put my name, email, a profile picture, and the style of how I dress so that other users can see it on the page when they click on my profile.
 2. As a User, I would like to create a gallery inside my profile, in which I could include pictures of the clothing items I own.

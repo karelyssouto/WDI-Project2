@@ -17,6 +17,7 @@
 - Express
 - Handlebars
 - Node.js
+- CSS
 
 ## Resources
 - Bulma.
@@ -24,7 +25,7 @@
 - Animate.css
 - Google Fonts.
 - CSS Tricks.
-- Clippy 
+- Clippy.
 
 
 ## Wireframes

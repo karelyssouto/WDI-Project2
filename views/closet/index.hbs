@@ -3,8 +3,6 @@
         <a class="navbar-item" href="/">
             <h1 class="title">Virtual Closet</h1>
         </a>
-        <div class="navbar-item"></div>
-        <div class="navbar-item"></div>
 
 
         <div class="navbar-end">
@@ -24,14 +22,14 @@
 
 
 
-
+  {{#each category}}
 <div class="columns is-centered">
-    {{#each category}}
-    <div class="column is-full-mobile is-one-third-tablet is-one-quarter-desktop is-one-quarter-widescreen is-one-quarter-fullhd">
+  
+    <div class="column is-full-mobile is-one-third-tablet is-one-third-desktop is-one-third-widescreen is-one-third-fullhd">
     
 <div class="tile is-ancestor">
-    <div class="tile is-parent">
-        <article class="tile is-child box">
+    <div class="tile is-vertical">
+        <article class="tile is-child box is-vertical">
             <figure class="image is-4by3">
                 <a href="/users/{{../userId}}/closets/{{_id}}"><img src="{{img}}"></a>
             </figure>
@@ -41,9 +39,6 @@
         </article>
     </div>
 {{/each}}
-
-
-</div>
 
 
 </div>

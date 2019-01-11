@@ -24,10 +24,12 @@ const clothesController = {
     },
     delete: (req,res) =>{
         const userId = req.params.userId
+        const closetid = req.params.closetid
         const clothesId = req.params.id
-        console.log(clothesId)
+        console.log('1'+ clothesId)
+        console.log('2'+ closetid)
         Clothes.findByIdAndDelete(clothesId).then(()=>{
-            res.redirect(`/users/${userId}/closets/${clothesId}`)
+            res.redirect(`/users/${userId}/closets/${closetid}`)
         })
     }
 }

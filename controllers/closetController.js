@@ -35,6 +35,8 @@ const closetController = {
         const closetid = req.params.closetid
         Closet.findById(closetid).populate('clothesInfo').then(closetid =>{
             const info = closetid.clothesInfo
+            console.log(userId)
+            console.log(closetid)
             res.render('closet/show', {userId, closetid, info})
         })
     },

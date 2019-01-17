@@ -47,8 +47,7 @@
 
 ### What could have I done differently?
 1. Evaluate my ERDs, taken a step back and done my routes differently.
-2. Try to get my last delete.
-3. Style it a little more, so that it does not look so generic.
+2. Style it a little more, so that it does not look so generic.
 
 
 
